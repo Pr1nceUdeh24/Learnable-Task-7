@@ -1,0 +1,113 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Background */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a, #9333ea);
+  color: #fff;
+}
+
+/* Glass Card */
+.quiz-container {
+  width: 400px;
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: fadeIn 0.6s ease;
+}
+
+/* Question */
+#question {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+/* Progress */
+#progress {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin-bottom: 15px;
+}
+
+/* Answer buttons */
+.btn-container button {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(5px);
+}
+
+/* Hover effect */
+.btn-container button:hover {
+  transform: translateY(-2px) scale(1.02);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Click feedback */
+.btn-container button:active {
+  transform: scale(0.97);
+}
+
+/* Correct & wrong states */
+.correct {
+  background: linear-gradient(135deg, #22c55e, #4ade80);
+  color: #052e16;
+}
+
+.wrong {
+  background: linear-gradient(135deg, #ef4444, #f87171);
+  color: #450a0a;
+}
+
+/* Next button */
+#next-btn {
+  margin-top: 15px;
+  padding: 12px;
+  width: 100%;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+/* Next button hover */
+#next-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
